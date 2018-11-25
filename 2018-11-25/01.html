@@ -18,11 +18,10 @@
 
         table {
             border-spacing: 0;
-            margin: 0 auto;
+            margin: 15px auto;
             width: 500px;
             border: 1px solid #ddd;
             text-align: center;
-            overflow: hidden;
         }
 
         table th,
@@ -37,7 +36,7 @@
         table tbody {
             display: block;
             height: 200px;            
-            overflow-y: scroll;
+            overflow-y: auto;
         }
 
         table tbody::-webkit-scrollbar {
@@ -47,14 +46,14 @@
         table thead,
         tbody tr {
             display: table;
+            table-layout: fixed; /* 使用表格固定算法 必须配合上一样使用 */
             width: 100%;
-            table-layout: fixed;
         }
     </style>
 </head>
 
 <body>
-    <table class="scoll">
+    <table>
         <thead>
             <tr>
                 <th>Position</th>
