@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文字穿透遮罩层</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container,h1{
+            background:url("https://gd4ark.github.io/CSS-Carousel/image/2.jpg");
+            background-size: 100% 100%;
+        }
+        .container h1,
+        .container::after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            color: white;
+            font-size: 8vw;
+        }
+        .container::after{
+            content: '';
+            background: rgba(0,0,0,0.8);
+        }
+        h1{
+            text-align: center;
+            line-height: 100vh;
+            z-index: 1;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 2px rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>I ❤ CSS</h1>
+    </div>
+</body>
+
+</html>
