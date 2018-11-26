@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文字切割</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background:url("https://raw.githubusercontent.com/gd4Ark/blog_demos/master/2018-11-26/1.jpg");
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 80px;
+        }
+        p{
+            margin-bottom: 25px;
+            font-size: 25px;
+        }
+        h1{
+            position: relative;
+            color:transparent;
+            caret-color:white;
+            outline: none;
+            cursor:text;
+            white-space: nowrap;
+        }
+        h1::before,
+        h1::after{
+            content: attr(data-content);
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            left: 0;
+            color: #CC3333;
+            outline: none;
+            font-size: inherit;
+        }
+        h1::after{
+            height: 50%;
+            top: 0;
+        }
+        h1:not(:focus)::after{
+            animation: action 5s 1s ease alternate infinite;
+        }
+        h1::before{
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            bottom: 0;
+            height: 50%;
+        }
+        @keyframes action{
+            0%{
+                transform: translateX(0px);
+            }
+            30%{
+                transform: translateX(-100px);
+            }
+            60%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>点击下方文字可进行编辑</p>
+    <h1 data-content="I Love CSS" contenteditable="true">I Love CSS</h1>
+    <script>
+        var h1 = document.querySelector('h1');
+        h1.addEventListener('input',function(){
+            h1.setAttribute('data-content',h1.innerText);
+        });
+    </script>
+</body>
+
+</html>
