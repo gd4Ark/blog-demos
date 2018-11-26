@@ -39,11 +39,10 @@
         h1::after{
             content: attr(data-content);
             position: absolute;
+            left: 0;
             width: 100%;
             overflow: hidden;
-            left: 0;
             color: #CC3333;
-            outline: none;
             font-size: inherit;
         }
         h1::after{
@@ -54,7 +53,6 @@
             animation: action 5s 1s ease alternate infinite;
         }
         h1::before{
-            overflow: hidden;
             display: flex;
             align-items: flex-end;
             bottom: 0;
