@@ -1,0 +1,48 @@
+CODE SETTINGS SYNC UPLOAD SUMMARY
+Version: 3.2.4
+--------------------
+GitHub Token: 1e8434dcf228210736c4c8151fa28959ae2cd086
+GitHub Gist: 6ad20767da273afb40684c1402e12921
+GitHub Gist Type: Secret
+
+Restarting Visual Studio Code may be required to apply color and file icon theme.
+--------------------
+Files Uploaded:
+  extensions.json > extensions.json
+  keybindings.json > keybindings.json
+  locale.json > locale.json
+  settings.json > settings.json
+
+Extensions Ignored:
+  No extensions ignored.
+
+Extensions Removed:
+  No extensions removed.
+
+Extensions Added:
+  auto-close-tag v0.5.6
+  auto-rename-tag v0.0.15
+  beautify v1.4.7
+  bracket-pair-colorizer v1.0.61
+  code-python-isort v0.0.3
+  code-settings-sync v3.2.4
+  guides v0.9.3
+  html5-boilerplate v1.0.3
+  icon-fonts v2.1.4
+  open-in-browser v2.0.0
+  path-autocomplete v1.13.1
+  path-intellisense v1.4.2
+  prettier-vscode v1.7.3
+  python v2018.12.1
+  regex v0.2.0
+  short-js-doc v0.2.0
+  vetur v0.14.5
+  vscode-element-helper v0.5.4
+  vscode-eslint v1.7.2
+  vscode-fileheader v0.0.2
+  vscode-filesize v2.1.1
+  vscode-html-css v0.2.0
+  vscode-icons v8.0.0
+  vscode-language-pack-zh-hans v1.30.2
+--------------------
+Done.
